@@ -8,10 +8,11 @@ LABEL io.openshift.expose-services 8443/tcp:https,8080/tcp:http
 
 RUN \
   yum install -y haproxy && \ 
-  yum clean all && \
-  chown  755 /docker-entrypoint.sh
+  yum clean all
 
 COPY container-files /
+
+RUN chown 755 /docker-entrypoint.sh
 
 ENV MASTER_CONFIG /etc/haproxy/master.cfg
 ENV GITLAB_CONFIG /etc/haproxy/gitlab.cfg
