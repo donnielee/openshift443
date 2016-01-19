@@ -12,7 +12,7 @@ RUN \
 
 COPY container-files /
 
-RUN chown 755 /docker-entrypoint.sh
+RUN chmod 755 /docker-entrypoint.sh
 
 ENV MASTER_CONFIG /etc/haproxy/master.cfg
 ENV GITLAB_CONFIG /etc/haproxy/gitlab.cfg
