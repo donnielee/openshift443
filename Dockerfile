@@ -9,8 +9,7 @@ LABEL io.openshift.expose-services 8443/tcp:https,8080/tcp:http
 RUN \
   yum install -y haproxy && \ 
   yum clean all && \
-  groupadd -g 1001 default && \
-  chown -R default:default /var/lib/haproxy
+  chown  755 /docker-entrypoint.sh
 
 COPY container-files /
 
