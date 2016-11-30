@@ -20,7 +20,7 @@ ENV GITLAB_CONFIG /etc/haproxy/gitlab.cfg
 # ENV is used to trigger either proxying either master or versioning 
 
 ENV MODE Master
-ENV OPENSHIFT_MASTER_SERVER=ose_master.local
+ENV OPENSHIFT_MASTER_SERVER=d-osht-os01.tfabric2.sktelecom.com
 ENV GITLAB_SERVER=gitlab.local
 
 EXPOSE 8080 8443
